@@ -37,7 +37,19 @@ const styles = StyleSheet.create({
   },
   userInputTxt: {
     borderBottomWidth: 1
-  }
+  },
+  radioContainer: {
+
+  },
+  radioGroup: {
+
+  },
+  radioButton: {
+
+  },
+  radioLabel: {
+
+  },
 
 
 

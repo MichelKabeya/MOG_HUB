@@ -1,9 +1,11 @@
 import { useState } from "react";
 import {View, ScrollView, SafeAreaView, Image,Text, TextInput} from 'react-native'
 import { styles } from '../components/Style';
+import {RadioButton} from 'react-native-paper'
 
 function Mainscreen () {
     const [petName, setPetName] = useState("")
+    const [selectedValue, setSelectValue] = useState('0')
 
     return (
         <View>
@@ -16,6 +18,24 @@ function Mainscreen () {
                 <Text style={styles.enterTxt}>Your Pet's Name:</Text>
                 <TextInput style={styles.userInputTxt} placeholder='Mog' value={petName} onChangeText={newText => setPetName(newText)}
                 />
+            </View>
+            <View style={{alignItems: 'center', justifyContent: 'center'}}>
+                <Text style={{fontWeight: 'bold', fontSize: 18}}>
+                    Select your pet:
+                </Text>
+                <View style={styles.radioContainer}>
+                    <View style={styles.radioGroup}>
+                        <View style={styles.radioButton}>
+                            <RadioButton.Android
+                            value="1"
+                            status={selectedValue == "1" ? 'checked' : 'unchecked'}
+                            onPress={() => setSelectValue('1')}
+                            color="orange"
+                            />
+                            <Text style={styles.radioLabel}>Cat</Text>
+                        </View>
+                    </View>
+                </View>
             </View>
         </ScrollView>
         </SafeAreaView></View>
