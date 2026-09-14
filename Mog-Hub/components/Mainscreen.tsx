@@ -50,7 +50,7 @@ function Mainscreen () {
                             onPress={() => setSelectValue('3')}
                             color="orange"
                             />
-                            <Text style={styles.radioLabel}>Cat</Text>
+                            <Text style={styles.radioLabel}>Rat</Text>
                         </View>
                     </View>
                 </View>
