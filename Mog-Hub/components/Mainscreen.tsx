@@ -34,6 +34,24 @@ function Mainscreen () {
                             />
                             <Text style={styles.radioLabel}>Cat</Text>
                         </View>
+                        <View style={styles.radioButton}>
+                            <RadioButton.Android
+                            value="2"
+                            status={selectedValue == "2" ? 'checked' : 'unchecked'}
+                            onPress={() => setSelectValue('2')}
+                            color="orange"
+                            />
+                            <Text style={styles.radioLabel}>Dog</Text>
+                        </View>
+                        <View style={styles.radioButton}>
+                            <RadioButton.Android
+                            value="3"
+                            status={selectedValue == "3" ? 'checked' : 'unchecked'}
+                            onPress={() => setSelectValue('3')}
+                            color="orange"
+                            />
+                            <Text style={styles.radioLabel}>Cat</Text>
+                        </View>
                     </View>
                 </View>
             </View>
